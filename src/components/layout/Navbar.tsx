@@ -1,16 +1,28 @@
 import NavButton from "../ui/Navbutton";
-import { Home, ShoppingCart, Layers, Phone } from "lucide-react";
+import { Home, ShoppingCart, Layers, User } from "lucide-react";
 import SearchBar from "../ui/SearchBar";
-
+import { useEffect, useState } from "react";
 
 function Navbar() {
+    const [hasShadow, setHasShadow] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setHasShadow(window.scrollY > 0);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+
+    }, []);
     const handleSearch = (query: string) => {
         console.log("Buscando:", query);
         // Aquí iría la lógica para buscar en productos o categorías (API call)
     };
     return (
-        <nav className="flex flex-col px-6 py-4">
-            <div className="flex items-center justify-between">{/* Logo */}
+        <nav className={`fixed top-0 left-0 px-12 py-4 w-full bg-white z-50 transition-shadow duration-300 ${hasShadow ? "shadow-md" : ""
+            }`}>
+            <div className="flex items-center justify-between">
+                {/* Logo */}
                 <div>
                     <div className="text-2xl font-bold text-orange-500">FerreMax</div>
                     <p className="font-size:0.5rem text-gray-600">Tu ferretería de confianza</p>
@@ -30,8 +42,8 @@ function Navbar() {
                         Carrito
                     </NavButton>
                     <span className="text-gray-300">|</span>
-                    <NavButton to="contacto" icon={<Phone size={18} />}>
-                        Contacto
+                    <NavButton to="cuenta" icon={<User size={18} />}>
+                        Mi cuenta
                     </NavButton>
                 </ul>
             </div>
