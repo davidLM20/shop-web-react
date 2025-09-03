@@ -1,30 +1,36 @@
-import Button from "../../../components/ui/Button";
+import ProdcutsCard from "../../../components/layout/ProductsCard";
+import drillImg from "../../../assets/png/taladro_percutar_bosch.jpg";
+import cementImg from "../../../assets/png/metallic-hammer.jpg";
+import paintImg from "../../../assets/png/top-view-artist-brushes-collection.jpg";
+import ButtonText from "../../../components/ui/ButtonText";
 
 const FeaturedProducts = () => {
   const products = [
-    { name: "Martillo Pro", price: "$15.00" },
-    { name: "Taladro Eléctrico", price: "$120.00" },
-    { name: "Pintura Acrílica", price: "$25.00" },
+    { title: "Taladro Percutor Bosch 650W", image: drillImg, decription: "Taladro percutor profesional con chuck de 13mm y velocidad variable. Ideal para hormigón, metal y madera.", price: 15.00 },
+    { title: "Martillo de Garra Stanley 16oz", image: cementImg, decription: "Martillo de garra con mango de fibra de vidrio para mayor durabilidad y absorción de impactos.", price: 120.00 },
+    { title: "Juego de Brochas Premium", image: paintImg, decription: "Set de 5 brochas profesionales para pintura látex y esmalte. Cerdas sintéticas de alta calidad.", price: 25.00 },
+    { title: "Sierra Circular 7.25 DeWalt", image: cementImg, decription: "Sierra circular profesional con motor de 15 amperios y base de magnesio para cortes precisos.", price: 299.99 },
+    { title: "Juego de Llaves Allen 9 Piezas", image: paintImg, decription: "Set completo de llaves Allen hexagonales de 1.5mm a 10mm en estuche metálico.", price: 25.00 },
+    { title: "Pintura Látex Blanco 4L", image: paintImg, decription: "Pintura látex interior lavable de alta cobertura. Rendimiento aproximado 40m² por galón.", price: 25.00 },
   ];
 
   return (
-    <section className="flex flex-col py-10 px-6 bg-gray-50 gap-2">
-      <h2 className="text-2xl font-bold mb-6">Productos Destacados</h2>
+    <section className="flex flex-col py-10 px-6 gap-2">
+      <div className="flex items-center justify-between w-auto mb-4">
+        <h2 className="text-2xl text-gray-800 font-bold">Productos Destacados</h2>
+        <ButtonText variant="primary">Ver todos los productos</ButtonText>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.map((p, i) => (
-          <div
+          <ProdcutsCard
             key={i}
-            className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
-          >
-            <h3 className="text-lg font-semibold">{p.name}</h3>
-            <p className="text-gray-600">{p.price}</p>
-            <button className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-              Agregar al carrito
-            </button>
-          </div>
+            image={p.image}
+            title={p.title}
+            description={p.decription}
+            price={p.price}
+          />
         ))}
       </div>
-      <Button variant={'secondary'}>Ver todos los productos</Button>
     </section>
   );
 };
