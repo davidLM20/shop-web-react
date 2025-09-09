@@ -5,7 +5,7 @@ import Newsletter from "./components/Newsletter";
 
 function Home() {
   return (
-    <div className="max-w-[1440px] mx-auto px-[60px]">
+    <div>
       <Hero/>
       <Categories/>
       <FeaturedProducts/>
