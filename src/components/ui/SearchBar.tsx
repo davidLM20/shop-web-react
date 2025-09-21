@@ -21,13 +21,13 @@ export default function SearchBar({ placeholder = "Buscar herramientas, material
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={placeholder}
-                className="group w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-full hover:border-gray-500 focus:outline-none focus:ring-3 focus:ring-orange-300"
+                className="group w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-xl hover:border-gray-400 focus:outline-none focus:ring-3 focus:ring-orange-200"
             />
             <button
                 type="submit"
                 className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
             >
-                <Search className="group-focus:text-orange-500" size={18} />
+                <Search className="group-focus:text-orange-300" size={18} />
             </button>
         </form>
     )

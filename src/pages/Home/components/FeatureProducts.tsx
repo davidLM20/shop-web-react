@@ -1,7 +1,7 @@
 import ProdcutsCard from "../../../components/layout/ProductsCard";
-import drillImg from "../../../assets/png/taladro_percutar_bosch.jpg";
-import cementImg from "../../../assets/png/metallic-hammer.jpg";
-import paintImg from "../../../assets/png/top-view-artist-brushes-collection.jpg";
+import drillImg from "../../../assets/img/taladro_percutar_bosch.jpg";
+import cementImg from "../../../assets/img/metallic-hammer.jpg";
+import paintImg from "../../../assets/img/top-view-artist-brushes-collection.jpg";
 import ButtonText from "../../../components/ui/ButtonText";
 
 const FeaturedProducts = () => {

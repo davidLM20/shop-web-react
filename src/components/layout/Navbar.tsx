@@ -32,17 +32,19 @@ function Navbar() {
                 </div>
                 {/* Menú */}
                 <ul className="flex items-center gap-1">
-                    <NavButton to="/" icon={<Home size={18} />}>
-                        Inicio
-                    </NavButton>
-                    <NavButton to="categorias" icon={<Layers size={18} />}>
-                        Categorías
-                    </NavButton>
-                    <NavButton to="carrito" icon={<ShoppingCart size={18} />}>
+                    <div className="flex bg-gray-100 rounded-xl p-1">
+                        <NavButton to="/" variant="primary" icon={<Home size={18} />}>
+                            Inicio
+                        </NavButton>
+                        <NavButton to="categorias" variant="primary" icon={<Layers size={18} />}>
+                            Categorías
+                        </NavButton>
+                    </div>
+                    <NavButton to="carrito" variant="icon" icon={<ShoppingCart size={18} />}>
                         Carrito
                     </NavButton>
                     <span className="text-gray-300">|</span>
-                    <NavButton to="cuenta" icon={<User size={18} />}>
+                    <NavButton to="cuenta" variant="icon" icon={<User size={18} />}>
                         Mi cuenta
                     </NavButton>
                 </ul>
