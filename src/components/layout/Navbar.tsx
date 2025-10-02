@@ -22,7 +22,6 @@ function Navbar() {
         <nav className={`fixed top-0 left-0 px-12 py-4 w-full bg-white z-50 transition-shadow duration-300 ${hasShadow ? "shadow-md" : ""
             }`}>
             <div className="flex items-center justify-between">
-                {/* Logo */}
                 <div>
                     <div className="text-2xl font-bold text-orange-500">FerreMax</div>
                     <p className="font-size:0.5rem text-gray-600">Tu ferretería de confianza</p>
@@ -30,13 +29,12 @@ function Navbar() {
                 <div className="flex-1 pl-8 mx-6">
                     <SearchBar onSearch={handleSearch} />
                 </div>
-                {/* Menú */}
                 <ul className="flex items-center gap-1">
                     <div className="flex bg-gray-100 rounded-xl p-1">
-                        <NavButton to="/" variant="primary" icon={<Home size={18} />}>
+                        <NavButton to="/" variant="primary">
                             Inicio
                         </NavButton>
-                        <NavButton to="categorias" variant="primary" icon={<Layers size={18} />}>
+                        <NavButton to="categorias" variant="primary">
                             Categorías
                         </NavButton>
                     </div>

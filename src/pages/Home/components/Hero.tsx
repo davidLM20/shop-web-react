@@ -5,7 +5,7 @@ import thirdImg from "../../../assets/img//home/herramientas-ferreteria.jpeg";
 
 const Hero = () => {
     return (
-        <section className="flex items-center max-w-[1440px] mx-auto pt-32 rounded-2xl gap-16">
+        <section className="flex items-center max-w-[1440px] mx-auto pt-32 rounded-2xl gap-16 mb-20">
             <div className="flex flex-col w-[50%] pt-20 pb-20 gap-4">
                 <h1 className="text-5xl">
                     <span className="font-bold text-gray-700">Tu ferretería de</span>{" "}
