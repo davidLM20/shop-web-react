@@ -9,7 +9,7 @@ type ButtonTextProps = {
 const ButtonText = ({ children, onClick, variant = "primary" }:ButtonTextProps) => {
     
     const variants: Record<string, string> = {
-        primary: "px-4 py-2 font-medium text-gray-600 rounded-[0.5rem] hover:bg-gray-100 hover:text-orange-500",
+        primary: "px-4 py-2 font-medium text-orange-500 rounded-[0.5rem] hover:text-orange-600",
         secondary: "px-6 py-2 text-blue-500 bg-white rounded-4xl hover:bg-gray-200",
     };
 

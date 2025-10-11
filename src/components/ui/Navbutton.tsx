@@ -27,7 +27,7 @@ export default function NavButton({ to, children, icon, variant = "secondary" }:
         <NavLink 
             to={to}
             className={({ isActive }) =>
-                `${baseStyle} ${variants[variant]} ${isActive && variant !== "icon" ? " bg-white text-orange-400 hover:bg-gray-100":""}`
+                `${baseStyle} ${variants[variant]} ${isActive && variant !== "icon" ? " bg-white text-orange-500 hover:bg-gray-100":""}`
             }>
             {icon && <span className="w-5 h-5">{icon}</span>}
             {variant !=="icon" && children}

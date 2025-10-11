@@ -1,17 +1,28 @@
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import FeaturedProducts from "./components/FeatureProducts";
-import Newsletter from "./components/Newsletter";
-import Metrics from "./components/Metrics";
+import Hero from "../../components/home/Hero";
+import Categories from "../../components/home/Categories";
+import FeaturedProducts from "../../components/home/FeatureProducts";
+import Newsletter from "../../components/home/Newsletter";
+import Metrics from "../../components/home/Metrics";
+import SectionWrapper from "../../layouts/SectionWrapper";
 
 function Home() {
   return (
     <div>
-      <Hero/>
-      <Metrics/>
-      <Categories/>
-      <FeaturedProducts/>
-      <Newsletter/>
+      <SectionWrapper>
+        <Hero />
+      </SectionWrapper>
+      <SectionWrapper fullWidth className="bg-gray-100">
+        <Metrics />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Categories />
+      </SectionWrapper>
+      <SectionWrapper fullWidth className="bg-gray-100">  
+        <FeaturedProducts />
+      </SectionWrapper>
+      <SectionWrapper fullWidth className="bg-gray-800">
+        <Newsletter />
+      </SectionWrapper>
     </div>
   );
 }

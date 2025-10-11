@@ -1,8 +1,8 @@
-import ProdcutsCard from "../../../components/layout/ProductsCard";
-import drillImg from "../../../assets/img/taladro_percutar_bosch.jpg";
-import cementImg from "../../../assets/img/metallic-hammer.jpg";
-import paintImg from "../../../assets/img/top-view-artist-brushes-collection.jpg";
-import ButtonText from "../../../components/ui/ButtonText";
+import ProdcutsCard from "../ui/ProductsCard";
+import drillImg from "../../assets/img/drill.png";
+import cementImg from "../../assets/img/cemento.png";
+import paintImg from "../../assets/img/paint.png";
+import ButtonText from "../ui/ButtonText";
 
 const FeaturedProducts = () => {
   const products = [
@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
   ];
 
   return (
-    <section className="flex flex-col py-10 px-6 gap-2">
+    <section className="flex flex-col justify-aroun">
       <div className="flex items-center justify-between w-auto mb-4">
         <h2 className="text-2xl text-gray-800 font-bold">Productos Destacados</h2>
         <ButtonText variant="primary">Ver todos los productos</ButtonText>

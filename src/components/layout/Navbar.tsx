@@ -1,5 +1,5 @@
 import NavButton from "../ui/Navbutton";
-import { Home, ShoppingCart, Layers, User } from "lucide-react";
+import { ShoppingCart, User } from "lucide-react";
 import SearchBar from "../ui/SearchBar";
 import { useEffect, useState } from "react";
 

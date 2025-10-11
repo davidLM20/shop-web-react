@@ -1,18 +1,18 @@
-import Button from "../../../components/ui/Button";
-import firtsImg from "../../../assets/img/home/herramientas-profesionales.jpg";
-import secondImg from "../../../assets/img//home/herramientas-electricas.jpeg";
-import thirdImg from "../../../assets/img//home/herramientas-ferreteria.jpeg";
+import Button from "../ui/Button";
+import firtsImg from "../../assets/img/home/herramientas-profesionales.jpg";
+import secondImg from "../../assets/img//home/herramientas-electricas.jpeg";
+import thirdImg from "../../assets/img//home/herramientas-ferreteria.jpeg";
 
 const Hero = () => {
     return (
-        <section className="flex items-center max-w-[1440px] mx-auto pt-32 rounded-2xl gap-16 mb-20">
+        <section className="flex justify-center items-center gap-8 mt-8">
             <div className="flex flex-col w-[50%] pt-20 pb-20 gap-4">
                 <h1 className="text-5xl">
                     <span className="font-bold text-gray-700">Tu ferretería de</span>{" "}
                     <span className="font-medium text-orange-500">confianza</span>
                 </h1>
                 <p className="mt-4 font-medium text-lg text-gray-700">Encuentra las mejores herramientas y materiales de construcción para todos tus proyectos</p>
-                <p className="text-md text-gray-500">Más de 25 años brindando soluciones profesionales con la mejor calidad y servicio. Desde herramientas básicas hasta equipos especializados.</p>
+                <p className="text-md text-gray-600">Más de 25 años brindando soluciones profesionales con la mejor calidad y servicio. Desde herramientas básicas hasta equipos especializados.</p>
                 <div className="flex gap-4 mt-4">
                     <Button variant="primary">Ver catálogo</Button>
                     <Button variant="secondary">Nuestras ofertas</Button>

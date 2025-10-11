@@ -1,4 +1,4 @@
-import Button from "../ui/Button";
+import Button from "./Button";
 
 type ProdcutsCardProps = {
     title: string;
@@ -9,7 +9,7 @@ type ProdcutsCardProps = {
 
 const ProdcutsCard = ({ title, image, price, description }: ProdcutsCardProps) => {
     return (
-        <div className="group relative flex flex-col rounded-2xl bg-white shadow-md hover:shadow-lg cursor-pointer overflow-hidden hover:scale-105 transition-trasform">
+        <article className="group relative flex flex-col rounded-2xl bg-white shadow-md hover:shadow-lg cursor-pointer overflow-hidden hover:scale-105 transition-trasform">
             <div className="relative w-full h-40">
                 <img src={image} alt={title} className="w-full h-full object-cover" />
             </div>
@@ -26,7 +26,7 @@ const ProdcutsCard = ({ title, image, price, description }: ProdcutsCardProps) =
                     <Button variant="primary">Agregar</Button>
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 
