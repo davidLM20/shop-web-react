@@ -4,6 +4,9 @@ import FeaturedProducts from "../../components/home/FeatureProducts";
 import Newsletter from "../../components/home/Newsletter";
 import Metrics from "../../components/home/Metrics";
 import SectionWrapper from "../../layouts/SectionWrapper";
+import NewBrand from "../../components/home/NewBrand";
+
+
 
 function Home() {
   return (
@@ -17,8 +20,11 @@ function Home() {
       <SectionWrapper>
         <Categories />
       </SectionWrapper>
-      <SectionWrapper fullWidth className="bg-gray-100">  
+      <SectionWrapper fullWidth className="bg-gray-100">
         <FeaturedProducts />
+      </SectionWrapper>
+      <SectionWrapper>
+        <NewBrand />
       </SectionWrapper>
       <SectionWrapper fullWidth className="bg-gray-800">
         <Newsletter />

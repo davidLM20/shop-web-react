@@ -19,7 +19,7 @@ const Categories = () => {
         { title: "Fontanería", image: cableImg, count: 134 },
     ];
     return (
-        <section className="flex flex-col  max-w-[1440px] mx-auto pt-32 rounded-2xl gap-2 mb-20">
+        <section className="flex flex-col  max-w-[1440px] mx-auto rounded-2xl gap-2">
             <div className="flex flex-col w-auto mb-4 gap-4">
                 <div className="flex justify-between w-full ">
                     <h2 className="text-3xl text-gray-700 font-bold">Nuestras Categorías</h2>
