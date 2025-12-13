@@ -21,8 +21,8 @@ const NewBrand = () => {
                 <h2 className="text-5xl font-bold text-gray-700">DeWalt llega a FerroMax</h2>
                 <p className="text-gray-600 text-center mt-2">Descubre la calidad profesional de DeWalt. Oferta especial de lanzamiento con hasta 40% de descuento.</p>
             </div>
-            <div className="grid grid-cols-2 gap-4 h-full">
-                <div className="rounded-2xl h-100"><img src={firtsImg} alt="" className="w-full h-full object-cover rounded-2xl" /></div>
+            <div className="grid grid-cols-[3fr_2fr] gap-4 items-stretch w-full">
+                <div className="relative rounded-2xl overflow-hidden"><img src={firtsImg} alt="" className="absolute inset-0 w-full h-full object-cover rounded-2xl" /></div>
                 <div className="grid grid-cols-2 gap-4">
                     {products.map((p, i) => (
                         <ProductsCard
