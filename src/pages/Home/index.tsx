@@ -5,12 +5,26 @@ import Newsletter from "../../components/home/Newsletter";
 import Metrics from "../../components/home/Metrics";
 import SectionWrapper from "../../layouts/SectionWrapper";
 import NewBrand from "../../components/home/NewBrand";
+import PartnerBrands from "../../components/home/PartnerBrands";
 
 
 
 function Home() {
   return (
+
     <div>
+      {/*Solucion temporal de animacion*/}
+      <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+
+          .animate-marquee {
+            animation: marquee 20s linear infinite;
+          }
+      `}</style>
+
       <SectionWrapper>
         <Hero />
       </SectionWrapper>
@@ -26,7 +40,10 @@ function Home() {
       <SectionWrapper>
         <NewBrand />
       </SectionWrapper>
-      <SectionWrapper fullWidth className="bg-gray-800">
+      <SectionWrapper fullWidth className="bg-gray-100">
+        <PartnerBrands />
+      </SectionWrapper>
+      <SectionWrapper>
         <Newsletter />
       </SectionWrapper>
     </div>

@@ -21,7 +21,7 @@ export default function SearchBar({ placeholder = "Buscar herramientas, material
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={placeholder}
-                className="group w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-xl hover:border-gray-400 focus:outline-none focus:ring-3 focus:ring-orange-200"
+                className="group w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-lg hover:border-gray-400 focus:outline-none focus:ring-3 focus:ring-orange-200"
             />
             <button
                 type="submit"
