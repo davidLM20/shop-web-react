@@ -15,19 +15,19 @@ export default function SearchBar({ placeholder = "Buscar herramientas, material
     };
 
     return (
-        <form onSubmit={handleSubmit} className="relative w-full max-w-md">
+        <form onSubmit={handleSubmit} className="group relative w-full max-w-md">
             <input
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={placeholder}
-                className="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-full hover:border-gray-600 focus:outline-none focus:ring-3 focus:ring-orange-500"
+                className="group w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-lg hover:border-gray-400 focus:outline-none focus:ring-3 focus:ring-orange-200"
             />
             <button
                 type="submit"
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-orange-600"
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
             >
-                <Search size={18} />
+                <Search className="group-focus:text-orange-300" size={18} />
             </button>
         </form>
     )

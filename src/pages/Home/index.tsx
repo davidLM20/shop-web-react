@@ -1,17 +1,51 @@
-import Button from "../../components/ui/Button";
+import Hero from "../../components/home/Hero";
+import Categories from "../../components/home/Categories";
+import FeaturedProducts from "../../components/home/FeatureProducts";
+import Newsletter from "../../components/home/Newsletter";
+import Metrics from "../../components/home/Metrics";
+import SectionWrapper from "../../layouts/SectionWrapper";
+import NewBrand from "../../components/home/NewBrand";
+import PartnerBrands from "../../components/home/PartnerBrands";
+
+
 
 function Home() {
   return (
-    <div className="p-6">
-      <div>
-        <p className="text-[0.9rem] mt-4">Más de 10,000 clientes satisfechos</p>
-      </div>
-      <h1 className="font-sans-serif text-4xl uppercase font-bold">Tu ferretería de confianza</h1>
-      <p className="mt-4 text-purple-600">Encuentra las mejores herramientas y materiales para todos tus proyectos de construcción y reparación.</p>
-      <div className="flex">
-        <Button variant="primary">Ver catálogo completo</Button>
-        <Button variant="secondary">Nuestas ofertas</Button>
-      </div>
+
+    <div>
+      {/*Solucion temporal de animacion*/}
+      <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+
+          .animate-marquee {
+            animation: marquee 20s linear infinite;
+          }
+      `}</style>
+
+      <SectionWrapper>
+        <Hero />
+      </SectionWrapper>
+      <SectionWrapper fullWidth className="bg-gray-100">
+        <Metrics />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Categories />
+      </SectionWrapper>
+      <SectionWrapper fullWidth className="bg-gray-100">
+        <FeaturedProducts />
+      </SectionWrapper>
+      <SectionWrapper>
+        <NewBrand />
+      </SectionWrapper>
+      <SectionWrapper fullWidth className="bg-gray-100">
+        <PartnerBrands />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Newsletter />
+      </SectionWrapper>
     </div>
   );
 }
