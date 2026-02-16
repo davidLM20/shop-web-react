@@ -11,7 +11,6 @@ import PartnerBrands from "../../components/home/PartnerBrands";
 
 function Home() {
   return (
-
     <div>
       {/*Solucion temporal de animacion*/}
       <style>{`
