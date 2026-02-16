@@ -20,7 +20,7 @@ const NewBrand = () => {
                 <div className="px-4 py-1 rounded-2xl bg-orange-100 text-orange-500 font-medium">Nueva Marca</div>
 
                 <div className="flex">
-                    <h2 className="text-5xl font-bolds text-gray-700">DeWalt llega a <span className="text-5xl font-bold text-orange-500">Ferromax</span> </h2>
+                    <h2 className="text-5xl font-bold text-gray-700">DeWalt llega a <span className="text-5xl font-bold text-orange-500">Ferromax</span> </h2>
                     
                 </div>
                 <p className="text-gray-600 text-center mt-2">Descubre la calidad profesional de DeWalt. Oferta especial de lanzamiento con hasta 40% de descuento.</p>
