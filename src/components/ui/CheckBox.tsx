@@ -1,22 +1,58 @@
-import { Check } from "lucide-react";
+import React from "react";
 
-const CheckBox = () => {
-    return (
-        <div className="inline-flex items-center">
-            <label className="flex items-center cursor-pointer relative" htmlFor="check-2">
-                <input type="checkbox"
-                    checked
-                    className="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                    id="check-2" />
-                <span className="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <Check size={16} />
-                </span>
-            </label>
-            <label className="cursor-pointer ml-2 text-slate-600 text-sm" htmlFor="check-2">
-                
-            </label>
-        </div>
-    );
-};
+interface CheckBoxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    label?: string;
+    error?: string;
+    helperText?: string;
+    containerClassName?: string;
+}
 
-export default CheckBox;
+export const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>(
+    (
+        {
+            label,
+            error,
+            helperText,
+            className = "",
+            containerClassName = "",
+            id,
+            ...props },
+        ref
+    ) => {
+        return (
+            <div className={`w-full ${containerClassName}`}>
+                <label
+                    htmlFor={id}
+                    className="flex items-start gap-2 cursor-pointer select-none"
+                >
+                    <input
+                        ref={ref}
+                        id={id}
+                        type="checkbox"
+                        className={`
+                            mt-1 h-4 w-4 rounded border-gray-300
+                            accent-orange-300
+                            focus:ring-2 focus:ring-red-500
+                            ${error ? "border-red-500 focus:ring-red-500" : ""}
+                            ${className}
+                            `}
+                        {...props}
+                    />
+                    {label && (
+                        <span className="text-sm text-gray-700">
+                            {label}
+                        </span>
+                    )}
+                </label>
+                {error && helperText && (
+                    <p className="text-xs text-red-500 mt-1">{error}</p>
+                )}
+                {!error && helperText && (
+                    <p className="text-xs text-gray-500 mt-1">{helperText}</p>
+                )}
+            </div>
+        );
+    }
+);
+
+CheckBox.displayName = "CheckBox";
