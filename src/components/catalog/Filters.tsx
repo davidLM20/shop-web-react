@@ -1,6 +1,6 @@
-import {ChevronUpIcon} from "lucide-react";
-import Input from "../ui/Input";
-import CheckBox from "../ui/CheckBox";
+import { ChevronUpIcon, Search } from "lucide-react";
+import { CheckBox } from "../ui/CheckBox";
+import { Input } from "../ui/Input";
 
 const Filters = () => {
 
@@ -14,7 +14,12 @@ const Filters = () => {
                     <p className="font-medium">Marcas</p>
                     <ChevronUpIcon />
                 </div>
-                <Input/>
+                <Input
+                    type="search"
+                    leadingIcon ={<Search size={16} />}
+                    placeholder="Buscar marca..."
+                
+                />
                 <div className="flex flex-col gap-2">
                     {brands.map((brand) => (
                         <div key={brand} className="flex items-center gap-2">
@@ -34,10 +39,9 @@ const Filters = () => {
             </div>
             <div className="flex flex-col rounded-2xl bg-gray-50 p-4 gap-4">
                 <div className="flex justify-between">
-                    <p className="font-medium">Marcas</p>
+                    <p className="font-medium">Ofertas</p>
                     <ChevronUpIcon />
                 </div>
-                <Input/>
                 <div className="flex flex-col gap-2">
                     {offers.map((offer) => (
                         <div key={offer} className="flex items-center gap-2">
