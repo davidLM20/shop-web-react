@@ -1,11 +1,18 @@
 import { ChevronUpIcon, Search } from "lucide-react";
 import { CheckBox } from "../ui/CheckBox";
 import { Input } from "../ui/Input";
+import { useMultiSelect } from "../../hooks/useMultiSelect";
 
 const Filters = () => {
 
     const brands = ["3M", "Bosch", "Dewalt", "Makita", "Stanley", "Truper"];
     const offers = ["Descuento", "Envío gratis", "2x1", "Promoción"];
+   
+    const brandFilters = useMultiSelect<string>();
+    const offerFilters = useMultiSelect<string>();
+
+    
+
     return (
         <section className="flex flex-col gap-4 ">
             <h3 className="text-2xl font-medium">Filtros</h3>
@@ -16,16 +23,18 @@ const Filters = () => {
                 </div>
                 <Input
                     type="search"
-                    leadingIcon ={<Search size={16} />}
+                    leadingIcon={<Search size={16} />}
                     placeholder="Buscar marca..."
-                
+
                 />
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1">
                     {brands.map((brand) => (
-                        <div key={brand} className="flex items-center gap-2">
-                            <CheckBox />
-                            <span className="text-sm text-gray-600">{brand}</span>
-                        </div>
+                        <CheckBox
+                            key={brand}
+                            id={brand}
+                            label={brand}
+                            checked={brandFilters.isSelected(brand)}
+                            onChange={() => brandFilters.toggle(brand)} />
                     ))}
                 </div>
             </div>
@@ -43,11 +52,14 @@ const Filters = () => {
                     <ChevronUpIcon />
                 </div>
                 <div className="flex flex-col gap-2">
+
                     {offers.map((offer) => (
-                        <div key={offer} className="flex items-center gap-2">
-                            <CheckBox />
-                            <span className="text-sm text-gray-600">{offer}</span>
-                        </div>
+                        <CheckBox
+                            key={offer}
+                            id={offer}
+                            label={offer}
+                            checked={offerFilters.isSelected(offer)}
+                            onChange={() => offerFilters.toggle(offer)} />
                     ))}
                 </div>
             </div>
